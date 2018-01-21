@@ -3,12 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>app2</title>
+    <link rel="stylesheet" href="app2style.css">
     <!-- link to downloaded Vue JS Dev version -->
     <script src="../vue.js"></script>
   </head>
   <body>
     <div id="app">
-      <p>{{sayHello()}} - <a v-bind:href="link">Google</a></p>
+      <h1 v-once>{{ title }}</h1>
+      <p>{{ sayHello() }} - <a v-bind:href="link">Google</a></p>
+      <p v-bind:class="class1">Hello Earth!</p>
+      <h1 v-html="finishedLink"></h1>
     </div>
     <script src="app2script.js"></script>
   </body>
